@@ -241,8 +241,8 @@ EV-Charging-Station-Optimizer/
 ### 1. Clone the repository
 
 ```bash
-git clone <YOUR-REPOSITORY-URL>
-cd EV-Charging-Station
+git clone https://github.com/sohan2277/EV-Charging-Station-Optimizer.git
+cd EV-Charging-Station-Optimizer
 ```
 
 ### 2. Configure the ESP32
@@ -269,7 +269,7 @@ Use the corresponding device credentials/tokens in the firmware configuration.
 
 ### 5. Import dashboards
 
-Download the dashboard JSON files and follow `ThingsBoard_README.md`.
+Download the dashboard JSON files and follow `README.md`.
 
 ---
 
