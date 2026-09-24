@@ -1,0 +1,1293 @@
+{
+  "title": "EV Charging Station - Master Overview",
+  "name": "EV Charging Station - Master Overview",
+  "image": null,
+  "mobileHide": false,
+  "mobileOrder": null,
+  "configuration": {
+    "entityAliases": {
+      "f4309383-5df1-48e6-bb7d-87860d0d0a52": {
+        "id": "f4309383-5df1-48e6-bb7d-87860d0d0a52",
+        "alias": "BAY 3",
+        "filter": {
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "3acd3b30-b719-11f1-8a27-e1d168a2087d"
+          },
+          "type": "singleEntity"
+        }
+      },
+      "151840ec-73cf-4048-ade1-2b91c0645164": {
+        "id": "151840ec-73cf-4048-ade1-2b91c0645164",
+        "alias": "All Charging Bays",
+        "filter": {
+          "resolveMultiple": true,
+          "entityType": "DEVICE",
+          "entityList": [
+            "63af0580-b41a-11f1-8553-d97f9e4a8828",
+            "203389f0-b719-11f1-973e-db7ef6e48014",
+            "3acd3b30-b719-11f1-8a27-e1d168a2087d"
+          ],
+          "type": "entityList"
+        }
+      },
+      "79e431cf-20b8-46d0-a3fb-76ad8cc4be7b": {
+        "id": "79e431cf-20b8-46d0-a3fb-76ad8cc4be7b",
+        "alias": "BAY 2",
+        "filter": {
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "203389f0-b719-11f1-973e-db7ef6e48014"
+          },
+          "type": "singleEntity"
+        }
+      },
+      "1f532aca-e985-47eb-9ce5-2a0f6a9897f8": {
+        "id": "1f532aca-e985-47eb-9ce5-2a0f6a9897f8",
+        "alias": "Charging Station",
+        "filter": {
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "ASSET",
+            "id": "88703870-b718-11f1-b576-77a220d5bf3e"
+          },
+          "type": "singleEntity"
+        }
+      },
+      "fc7b7ea3-1fd6-4b79-b7ec-38c2468a8db2": {
+        "id": "fc7b7ea3-1fd6-4b79-b7ec-38c2468a8db2",
+        "alias": "BAY 1",
+        "filter": {
+          "resolveMultiple": false,
+          "singleEntity": {
+            "entityType": "DEVICE",
+            "id": "63af0580-b41a-11f1-8553-d97f9e4a8828"
+          },
+          "type": "singleEntity"
+        }
+      }
+    },
+    "filters": {},
+    "widgets": {
+      "1eca7d84-efb9-4521-8be4-553695d09429": {
+        "id": "1eca7d84-efb9-4521-8be4-553695d09429",
+        "type": "latest",
+        "typeFullFqn": "system.cards.markdown_card",
+        "config": {
+          "title": "EV Charging Station - Central Management",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "1f532aca-e985-47eb-9ce5-2a0f6a9897f8",
+              "dataKeys": []
+            }
+          ],
+          "enableFullscreen": false,
+          "settings": {
+            "useMarkdownTextFunction": false,
+            "markdownTextPattern": "<div style=\"display: flex; justify-content: space-between; align-items: center; padding: 4px 8px;\"><div><h2 style=\"margin: 0; font-size: 20px; font-weight: 700; color: #1565C0;\">⚡ SMART EV CHARGING STATION — MASTER CONTROL</h2><div style=\"margin-top: 4px; font-size: 13px; color: #546E7A;\">Central Power Distribution & Load Management System | Total Capacity: 6000 W</div></div><div style=\"display: flex; gap: 16px; align-items: center;\"><div style=\"text-align: right;\"><div style=\"font-size: 11px; text-transform: uppercase; color: #78909C; font-weight: 600;\">System Status</div><div style=\"font-size: 14px; font-weight: 700; color: #2E7D32;\">● ONLINE / BALANCED</div></div></div></div>",
+            "applyDefaultMarkdownStyle": true
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 24,
+        "sizeY": 2
+      },
+      "408d3870-dbfa-4db9-b105-beacbab974cc": {
+        "id": "408d3870-dbfa-4db9-b105-beacbab974cc",
+        "type": "latest",
+        "typeFullFqn": "system.cards.value_card",
+        "config": {
+          "title": "Total Station Power",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "1f532aca-e985-47eb-9ce5-2a0f6a9897f8",
+              "dataKeys": [
+                {
+                  "name": "TotalStationPower",
+                  "type": "attribute",
+                  "label": "Total Station Power",
+                  "color": "#2196f3",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "settings": {
+            "layout": "square",
+            "showLabel": true,
+            "showIcon": true,
+            "showDate": false,
+            "icon": "bolt",
+            "iconSize": 24,
+            "iconSizeUnit": "px",
+            "iconColor": {
+              "type": "constant",
+              "color": "var(--tb-primary-500)"
+            }
+          },
+          "units": "W",
+          "decimals": 0,
+          "enableDataExport": false
+        },
+        "sizeX": 4,
+        "sizeY": 4
+      },
+      "28ddf403-97c7-4a9b-85fd-31f23204b4c8": {
+        "id": "28ddf403-97c7-4a9b-85fd-31f23204b4c8",
+        "type": "latest",
+        "typeFullFqn": "system.cards.value_card",
+        "config": {
+          "title": "Station Power Limit",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "fc7b7ea3-1fd6-4b79-b7ec-38c2468a8db2",
+              "dataKeys": [
+                {
+                  "name": "maxStationLoadW",
+                  "type": "attribute",
+                  "label": "Max Power Limit",
+                  "color": "#2196f3",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "settings": {
+            "layout": "square",
+            "showLabel": true,
+            "showIcon": true,
+            "showDate": false,
+            "icon": "speed",
+            "iconSize": 24,
+            "iconSizeUnit": "px",
+            "iconColor": {
+              "type": "constant",
+              "color": "var(--tb-primary-500)"
+            }
+          },
+          "units": "W",
+          "decimals": 0,
+          "enableDataExport": false
+        },
+        "sizeX": 4,
+        "sizeY": 4
+      },
+      "16c66c10-3c5d-43f8-9340-b66015556470": {
+        "id": "16c66c10-3c5d-43f8-9340-b66015556470",
+        "type": "latest",
+        "typeFullFqn": "system.digital_gauges.simple_gauge_justgage",
+        "config": {
+          "title": "Total Station Power (0 - 6000 W)",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "1f532aca-e985-47eb-9ce5-2a0f6a9897f8",
+              "dataKeys": [
+                {
+                  "name": "TotalStationPower",
+                  "type": "attribute",
+                  "label": "Total Load",
+                  "color": "#000000DE",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "units": "W",
+          "decimals": 0,
+          "settings": {
+            "minValue": 0,
+            "maxValue": 6000,
+            "gaugeType": "arc",
+            "showTitle": true,
+            "title": "Total Station Power (0 - 6000 W)",
+            "titleFont": {
+              "color": "#000000DE"
+            },
+            "labelFont": {},
+            "valueFont": {},
+            "minMaxFont": {},
+            "showMinMax": false,
+            "showValue": true,
+            "levelColors": [],
+            "barColor": {
+              "type": "function",
+              "colorFunction": "if (value >= 6000) return '#f44336'; if (value >= 4500) return '#ff9800'; return '#4caf50';",
+              "color": "#000000DE",
+              "gradient": {
+                "advancedMode": false,
+                "gradient": [
+                  "rgba(0, 255, 0, 1)",
+                  "rgba(255, 0, 0, 1)"
+                ],
+                "gradientAdvanced": [
+                  {
+                    "source": {
+                      "type": "constant"
+                    },
+                    "color": "rgba(0, 255, 0, 1)"
+                  },
+                  {
+                    "source": {
+                      "type": "constant"
+                    },
+                    "color": "rgba(255, 0, 0, 1)"
+                  }
+                ],
+                "minValue": 0,
+                "maxValue": 6000
+              }
+            }
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 6,
+        "sizeY": 4
+      },
+      "0fe224e5-f9a8-48fe-9dc1-f9a13d495517": {
+        "id": "0fe224e5-f9a8-48fe-9dc1-f9a13d495517",
+        "type": "latest",
+        "typeFullFqn": "system.alarm_count",
+        "config": {
+          "title": "Station Active Alarms",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "alarmCount",
+              "entityAliasId": "151840ec-73cf-4048-ade1-2b91c0645164",
+              "dataKeys": [
+                {
+                  "name": "count",
+                  "type": "count",
+                  "label": "count",
+                  "color": "#2196f3",
+                  "settings": {}
+                }
+              ],
+              "alarmFilterConfig": {
+                "typeList": [],
+                "statusList": [
+                  "ACTIVE"
+                ],
+                "searchPropagatedAlarms": true
+              }
+            }
+          ],
+          "settings": {
+            "label": "Station Active Alarms",
+            "showLabel": true,
+            "layout": "column",
+            "showIcon": true,
+            "icon": "warning",
+            "iconSize": 20,
+            "iconSizeUnit": "px",
+            "showIconBackground": true,
+            "iconBackgroundSize": 36,
+            "iconBackgroundSizeUnit": "px",
+            "iconBackgroundColor": {
+              "type": "range",
+              "color": "rgba(0, 105, 92, 1)",
+              "rangeList": {
+                "advancedMode": false,
+                "range": [
+                  {
+                    "from": 0,
+                    "to": 1,
+                    "color": "rgba(0, 105, 92, 1)"
+                  },
+                  {
+                    "from": 1,
+                    "to": null,
+                    "color": "rgba(209, 39, 48, 1)"
+                  }
+                ]
+              }
+            }
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 4,
+        "sizeY": 4
+      },
+      "be1b2a0f-50ea-4bf9-939f-0d2ecf397198": {
+        "id": "be1b2a0f-50ea-4bf9-939f-0d2ecf397198",
+        "type": "latest",
+        "typeFullFqn": "system.cards.markdown_card",
+        "config": {
+          "title": "BAY 1 — Status Overview",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "fc7b7ea3-1fd6-4b79-b7ec-38c2468a8db2",
+              "dataKeys": [
+                {
+                  "name": "bayStatus",
+                  "type": "timeseries",
+                  "label": "Status",
+                  "color": "#2196f3",
+                  "settings": {}
+                },
+                {
+                  "name": "power",
+                  "type": "timeseries",
+                  "label": "Power",
+                  "color": "#4caf50",
+                  "settings": {}
+                },
+                {
+                  "name": "current",
+                  "type": "timeseries",
+                  "label": "Current",
+                  "color": "#f44336",
+                  "settings": {}
+                },
+                {
+                  "name": "voltage",
+                  "type": "timeseries",
+                  "label": "Voltage",
+                  "color": "#ffc107",
+                  "settings": {}
+                },
+                {
+                  "name": "throttleLevel",
+                  "type": "timeseries",
+                  "label": "Throttle",
+                  "color": "#9c27b0",
+                  "settings": {}
+                },
+                {
+                  "name": "loadDecision",
+                  "type": "timeseries",
+                  "label": "Decision",
+                  "color": "#00bcd4",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "settings": {
+            "useMarkdownTextFunction": false,
+            "markdownTextPattern": "<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 4px;\"><div style=\"display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 2px solid #E0E0E0;\"><span style=\"font-size: 16px; font-weight: 700; color: #1E88E5;\">🔌 ${entityName}</span><span style=\"font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 12px; color: white;\" [style.backgroundColor]=\"'${Status}' === 'FREE' ? '#4CAF50' : ('${Status}' === 'CHARGING' ? '#FF9800' : '#F44336')\">${Status}</span></div><table style=\"width: 100%; font-size: 13px; border-collapse: collapse; line-height: 1.7;\"><tr><td style=\"color: #616161;\">Active Power:</td><td style=\"text-align: right; font-weight: 700; color: #212121;\">${Power:0} W</td></tr><tr><td style=\"color: #616161;\">Current:</td><td style=\"text-align: right; font-weight: 600; color: #212121;\">${Current:1} A</td></tr><tr><td style=\"color: #616161;\">Voltage:</td><td style=\"text-align: right; font-weight: 600; color: #212121;\">${Voltage:1} V</td></tr><tr><td style=\"color: #616161;\">Throttle Level:</td><td style=\"text-align: right; font-weight: 600; color: #212121;\">${Throttle:0}%</td></tr><tr><td style=\"color: #616161;\">Load Decision:</td><td style=\"text-align: right; font-weight: 600; color: #1976D2;\">${Decision}</td></tr><tr><td style=\"color: #616161;\">Alarm Status:</td><td style=\"text-align: right; font-weight: 600; color: #388E3C;\">NORMAL</td></tr></table></div>",
+            "applyDefaultMarkdownStyle": true
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 8,
+        "sizeY": 4
+      },
+      "046accd2-592e-4d80-9db9-de099aee5cd5": {
+        "id": "046accd2-592e-4d80-9db9-de099aee5cd5",
+        "type": "latest",
+        "typeFullFqn": "system.cards.markdown_card",
+        "config": {
+          "title": "BAY 2 — Status Overview",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "79e431cf-20b8-46d0-a3fb-76ad8cc4be7b",
+              "dataKeys": [
+                {
+                  "name": "bayStatus",
+                  "type": "timeseries",
+                  "label": "Status",
+                  "color": "#2196f3",
+                  "settings": {}
+                },
+                {
+                  "name": "power",
+                  "type": "timeseries",
+                  "label": "Power",
+                  "color": "#4caf50",
+                  "settings": {}
+                },
+                {
+                  "name": "current",
+                  "type": "timeseries",
+                  "label": "Current",
+                  "color": "#f44336",
+                  "settings": {}
+                },
+                {
+                  "name": "voltage",
+                  "type": "timeseries",
+                  "label": "Voltage",
+                  "color": "#ffc107",
+                  "settings": {}
+                },
+                {
+                  "name": "throttleLevel",
+                  "type": "timeseries",
+                  "label": "Throttle",
+                  "color": "#9c27b0",
+                  "settings": {}
+                },
+                {
+                  "name": "loadDecision",
+                  "type": "timeseries",
+                  "label": "Decision",
+                  "color": "#00bcd4",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "settings": {
+            "useMarkdownTextFunction": false,
+            "markdownTextPattern": "<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 4px;\"><div style=\"display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 2px solid #E0E0E0;\"><span style=\"font-size: 16px; font-weight: 700; color: #1E88E5;\">🔌 ${entityName}</span><span style=\"font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 12px; color: white;\" [style.backgroundColor]=\"'${Status}' === 'FREE' ? '#4CAF50' : ('${Status}' === 'CHARGING' ? '#FF9800' : '#F44336')\">${Status}</span></div><table style=\"width: 100%; font-size: 13px; border-collapse: collapse; line-height: 1.7;\"><tr><td style=\"color: #616161;\">Active Power:</td><td style=\"text-align: right; font-weight: 700; color: #212121;\">${Power:0} W</td></tr><tr><td style=\"color: #616161;\">Current:</td><td style=\"text-align: right; font-weight: 600; color: #212121;\">${Current:1} A</td></tr><tr><td style=\"color: #616161;\">Voltage:</td><td style=\"text-align: right; font-weight: 600; color: #212121;\">${Voltage:1} V</td></tr><tr><td style=\"color: #616161;\">Throttle Level:</td><td style=\"text-align: right; font-weight: 600; color: #212121;\">${Throttle:0}%</td></tr><tr><td style=\"color: #616161;\">Load Decision:</td><td style=\"text-align: right; font-weight: 600; color: #1976D2;\">${Decision}</td></tr><tr><td style=\"color: #616161;\">Alarm Status:</td><td style=\"text-align: right; font-weight: 600; color: #388E3C;\">NORMAL</td></tr></table></div>",
+            "applyDefaultMarkdownStyle": true
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 8,
+        "sizeY": 4
+      },
+      "419e3397-3cd4-4868-801d-f74d17eb678d": {
+        "id": "419e3397-3cd4-4868-801d-f74d17eb678d",
+        "type": "latest",
+        "typeFullFqn": "system.cards.markdown_card",
+        "config": {
+          "title": "BAY 3 — Status Overview",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "f4309383-5df1-48e6-bb7d-87860d0d0a52",
+              "dataKeys": [
+                {
+                  "name": "bayStatus",
+                  "type": "timeseries",
+                  "label": "Status",
+                  "color": "#2196f3",
+                  "settings": {}
+                },
+                {
+                  "name": "power",
+                  "type": "timeseries",
+                  "label": "Power",
+                  "color": "#4caf50",
+                  "settings": {}
+                },
+                {
+                  "name": "current",
+                  "type": "timeseries",
+                  "label": "Current",
+                  "color": "#f44336",
+                  "settings": {}
+                },
+                {
+                  "name": "voltage",
+                  "type": "timeseries",
+                  "label": "Voltage",
+                  "color": "#ffc107",
+                  "settings": {}
+                },
+                {
+                  "name": "throttleLevel",
+                  "type": "timeseries",
+                  "label": "Throttle",
+                  "color": "#9c27b0",
+                  "settings": {}
+                },
+                {
+                  "name": "loadDecision",
+                  "type": "timeseries",
+                  "label": "Decision",
+                  "color": "#00bcd4",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "settings": {
+            "useMarkdownTextFunction": false,
+            "markdownTextPattern": "<div style=\"font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; padding: 4px;\"><div style=\"display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 2px solid #E0E0E0;\"><span style=\"font-size: 16px; font-weight: 700; color: #1E88E5;\">🔌 ${entityName}</span><span style=\"font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 12px; color: white;\" [style.backgroundColor]=\"'${Status}' === 'FREE' ? '#4CAF50' : ('${Status}' === 'CHARGING' ? '#FF9800' : '#F44336')\">${Status}</span></div><table style=\"width: 100%; font-size: 13px; border-collapse: collapse; line-height: 1.7;\"><tr><td style=\"color: #616161;\">Active Power:</td><td style=\"text-align: right; font-weight: 700; color: #212121;\">${Power:0} W</td></tr><tr><td style=\"color: #616161;\">Current:</td><td style=\"text-align: right; font-weight: 600; color: #212121;\">${Current:1} A</td></tr><tr><td style=\"color: #616161;\">Voltage:</td><td style=\"text-align: right; font-weight: 600; color: #212121;\">${Voltage:1} V</td></tr><tr><td style=\"color: #616161;\">Throttle Level:</td><td style=\"text-align: right; font-weight: 600; color: #212121;\">${Throttle:0}%</td></tr><tr><td style=\"color: #616161;\">Load Decision:</td><td style=\"text-align: right; font-weight: 600; color: #1976D2;\">${Decision}</td></tr><tr><td style=\"color: #616161;\">Alarm Status:</td><td style=\"text-align: right; font-weight: 600; color: #388E3C;\">NORMAL</td></tr></table></div>",
+            "applyDefaultMarkdownStyle": true
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 8,
+        "sizeY": 4
+      },
+      "94ecccc2-191e-4943-95d3-7d4edb0ac2ff": {
+        "id": "94ecccc2-191e-4943-95d3-7d4edb0ac2ff",
+        "type": "timeseries",
+        "typeFullFqn": "system.time_series_chart",
+        "config": {
+          "title": "Station Power History (6000 W Station Limit)",
+          "showTitle": true,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "151840ec-73cf-4048-ade1-2b91c0645164",
+              "dataKeys": [
+                {
+                  "name": "power",
+                  "type": "timeseries",
+                  "label": "Power",
+                  "color": "#2196f3",
+                  "settings": {},
+                  "units": "W",
+                  "decimals": 0
+                }
+              ]
+            }
+          ],
+          "useDashboardTimewindow": true,
+          "settings": {
+            "dataZoom": false,
+            "showLegend": true,
+            "legendConfig": {
+              "direction": "column",
+              "position": "top",
+              "sortDataKeys": false,
+              "showMin": false,
+              "showMax": false,
+              "showAvg": true,
+              "showTotal": false,
+              "showLatest": false
+            },
+            "yAxes": {
+              "default": {
+                "id": "default",
+                "order": 0,
+                "position": "left",
+                "show": true,
+                "label": "Active Power (W)",
+                "units": "W",
+                "decimals": 0,
+                "min": 0,
+                "max": 6000
+              }
+            }
+          },
+          "enableDataExport": true
+        },
+        "sizeX": 14,
+        "sizeY": 6
+      },
+      "d5030ed1-8093-49a6-b6c6-f6ee0ac9bea1": {
+        "id": "d5030ed1-8093-49a6-b6c6-f6ee0ac9bea1",
+        "type": "latest",
+        "typeFullFqn": "system.bars",
+        "config": {
+          "title": "BAY Power Comparison (Real-Time W)",
+          "showTitle": true,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "151840ec-73cf-4048-ade1-2b91c0645164",
+              "dataKeys": [
+                {
+                  "name": "power",
+                  "type": "timeseries",
+                  "label": "${entityName}",
+                  "color": "#1976D2",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "padding": "0px",
+          "margin": "0px",
+          "units": "W",
+          "decimals": 0,
+          "settings": {
+            "dataZoom": false,
+            "tooltipValueType": "absolute",
+            "xAxis": {
+              "show": true,
+              "position": "bottom"
+            },
+            "yAxis": {
+              "show": true,
+              "position": "left"
+            },
+            "yAxes": {},
+            "layout": "with_total"
+          },
+          "showLegend": false,
+          "enableDataExport": true
+        },
+        "sizeX": 10,
+        "sizeY": 6
+      },
+      "6b705f28-2ccf-4b4e-85e2-a45ebcc6a0f0": {
+        "id": "6b705f28-2ccf-4b4e-85e2-a45ebcc6a0f0",
+        "type": "latest",
+        "typeFullFqn": "system.cards.entities_table",
+        "config": {
+          "title": "Live Bay Operational Status & Telemetry",
+          "showTitle": true,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "entity",
+              "entityAliasId": "151840ec-73cf-4048-ade1-2b91c0645164",
+              "dataKeys": [
+                {
+                  "name": "name",
+                  "type": "entityField",
+                  "label": "Charging Bay",
+                  "color": "#2196f3",
+                  "settings": {}
+                },
+                {
+                  "name": "bayStatus",
+                  "type": "timeseries",
+                  "label": "Status",
+                  "color": "#4caf50",
+                  "settings": {}
+                },
+                {
+                  "name": "power",
+                  "type": "timeseries",
+                  "label": "Power",
+                  "color": "#f44336",
+                  "settings": {},
+                  "units": "W",
+                  "decimals": 0
+                },
+                {
+                  "name": "current",
+                  "type": "timeseries",
+                  "label": "Current",
+                  "color": "#ffc107",
+                  "settings": {},
+                  "units": "A",
+                  "decimals": 1
+                },
+                {
+                  "name": "voltage",
+                  "type": "timeseries",
+                  "label": "Voltage",
+                  "color": "#9c27b0",
+                  "settings": {},
+                  "units": "V",
+                  "decimals": 0
+                },
+                {
+                  "name": "throttleLevel",
+                  "type": "timeseries",
+                  "label": "Throttle",
+                  "color": "#00bcd4",
+                  "settings": {},
+                  "units": "%",
+                  "decimals": 0
+                },
+                {
+                  "name": "loadDecision",
+                  "type": "timeseries",
+                  "label": "Load Decision",
+                  "color": "#ff9800",
+                  "settings": {}
+                }
+              ]
+            }
+          ],
+          "enableFullscreen": false,
+          "settings": {
+            "enableSearch": true,
+            "displayPagination": true,
+            "defaultPageSize": 10,
+            "displayEntityName": false,
+            "displayEntityLabel": false,
+            "displayEntityType": false
+          },
+          "enableDataExport": true
+        },
+        "sizeX": 14,
+        "sizeY": 5
+      },
+      "f88fffc7-02a7-49c0-80fd-3b7983a3e68c": {
+        "id": "f88fffc7-02a7-49c0-80fd-3b7983a3e68c",
+        "type": "latest",
+        "typeFullFqn": "system.alarm_count",
+        "config": {
+          "title": "BAY 1 Alarms",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "alarmCount",
+              "entityAliasId": "fc7b7ea3-1fd6-4b79-b7ec-38c2468a8db2",
+              "dataKeys": [
+                {
+                  "name": "count",
+                  "type": "count",
+                  "label": "count",
+                  "color": "#2196f3",
+                  "settings": {}
+                }
+              ],
+              "alarmFilterConfig": {
+                "typeList": [],
+                "statusList": [
+                  "ACTIVE"
+                ],
+                "searchPropagatedAlarms": true
+              }
+            }
+          ],
+          "settings": {
+            "label": "BAY 1 Active Alarms",
+            "showLabel": true,
+            "layout": "column",
+            "showIcon": true,
+            "icon": "warning",
+            "iconSize": 20,
+            "iconSizeUnit": "px",
+            "showIconBackground": true,
+            "iconBackgroundSize": 36,
+            "iconBackgroundSizeUnit": "px",
+            "iconBackgroundColor": {
+              "type": "range",
+              "color": "rgba(0, 105, 92, 1)",
+              "rangeList": {
+                "advancedMode": false,
+                "range": [
+                  {
+                    "from": 0,
+                    "to": 1,
+                    "color": "rgba(0, 105, 92, 1)"
+                  },
+                  {
+                    "from": 1,
+                    "to": null,
+                    "color": "rgba(209, 39, 48, 1)"
+                  }
+                ]
+              }
+            }
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 6,
+        "sizeY": 2
+      },
+      "e0d0a3fb-d7ba-4ff5-9973-2727b1468004": {
+        "id": "e0d0a3fb-d7ba-4ff5-9973-2727b1468004",
+        "type": "latest",
+        "typeFullFqn": "system.alarm_count",
+        "config": {
+          "title": "BAY 2 Alarms",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "alarmCount",
+              "entityAliasId": "79e431cf-20b8-46d0-a3fb-76ad8cc4be7b",
+              "dataKeys": [
+                {
+                  "name": "count",
+                  "type": "count",
+                  "label": "count",
+                  "color": "#2196f3",
+                  "settings": {}
+                }
+              ],
+              "alarmFilterConfig": {
+                "typeList": [],
+                "statusList": [
+                  "ACTIVE"
+                ],
+                "searchPropagatedAlarms": true
+              }
+            }
+          ],
+          "settings": {
+            "label": "BAY 2 Active Alarms",
+            "showLabel": true,
+            "layout": "column",
+            "showIcon": true,
+            "icon": "warning",
+            "iconSize": 20,
+            "iconSizeUnit": "px",
+            "showIconBackground": true,
+            "iconBackgroundSize": 36,
+            "iconBackgroundSizeUnit": "px",
+            "iconBackgroundColor": {
+              "type": "range",
+              "color": "rgba(0, 105, 92, 1)",
+              "rangeList": {
+                "advancedMode": false,
+                "range": [
+                  {
+                    "from": 0,
+                    "to": 1,
+                    "color": "rgba(0, 105, 92, 1)"
+                  },
+                  {
+                    "from": 1,
+                    "to": null,
+                    "color": "rgba(209, 39, 48, 1)"
+                  }
+                ]
+              }
+            }
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 6,
+        "sizeY": 2
+      },
+      "0f80f291-ba31-46c3-93c3-d7b921cc440a": {
+        "id": "0f80f291-ba31-46c3-93c3-d7b921cc440a",
+        "type": "latest",
+        "typeFullFqn": "system.alarm_count",
+        "config": {
+          "title": "BAY 3 Alarms",
+          "showTitle": false,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "datasources": [
+            {
+              "type": "alarmCount",
+              "entityAliasId": "f4309383-5df1-48e6-bb7d-87860d0d0a52",
+              "dataKeys": [
+                {
+                  "name": "count",
+                  "type": "count",
+                  "label": "count",
+                  "color": "#2196f3",
+                  "settings": {}
+                }
+              ],
+              "alarmFilterConfig": {
+                "typeList": [],
+                "statusList": [
+                  "ACTIVE"
+                ],
+                "searchPropagatedAlarms": true
+              }
+            }
+          ],
+          "settings": {
+            "label": "BAY 3 Active Alarms",
+            "showLabel": true,
+            "layout": "column",
+            "showIcon": true,
+            "icon": "warning",
+            "iconSize": 20,
+            "iconSizeUnit": "px",
+            "showIconBackground": true,
+            "iconBackgroundSize": 36,
+            "iconBackgroundSizeUnit": "px",
+            "iconBackgroundColor": {
+              "type": "range",
+              "color": "rgba(0, 105, 92, 1)",
+              "rangeList": {
+                "advancedMode": false,
+                "range": [
+                  {
+                    "from": 0,
+                    "to": 1,
+                    "color": "rgba(0, 105, 92, 1)"
+                  },
+                  {
+                    "from": 1,
+                    "to": null,
+                    "color": "rgba(209, 39, 48, 1)"
+                  }
+                ]
+              }
+            }
+          },
+          "enableDataExport": false
+        },
+        "sizeX": 6,
+        "sizeY": 2
+      },
+      "ff6fb00b-8858-4503-87fe-46ec9780f50d": {
+        "id": "ff6fb00b-8858-4503-87fe-46ec9780f50d",
+        "type": "alarm",
+        "typeFullFqn": "system.alarm_widgets.alarms_table",
+        "config": {
+          "title": "Station Alarm Management & Event Log (OverCurrent & System)",
+          "showTitle": true,
+          "configMode": "basic",
+          "dropShadow": false,
+          "borderRadius": "8px",
+          "widgetStyle": {
+            "box-shadow": "0px 2px 4px 0px #00000024;"
+          },
+          "titleFont": {
+            "size": 21,
+            "sizeUnit": "px",
+            "weight": "500",
+            "lineHeight": "22px"
+          },
+          "alarmSource": {
+            "type": "entity",
+            "entityAliasId": "151840ec-73cf-4048-ade1-2b91c0645164",
+            "dataKeys": [
+              {
+                "name": "createdTime",
+                "type": "alarm",
+                "label": "Created time",
+                "color": "#2196f3",
+                "settings": {}
+              },
+              {
+                "name": "originator",
+                "type": "alarm",
+                "label": "Originator",
+                "color": "#4caf50",
+                "settings": {}
+              },
+              {
+                "name": "type",
+                "type": "alarm",
+                "label": "Type",
+                "color": "#f44336",
+                "settings": {}
+              },
+              {
+                "name": "severity",
+                "type": "alarm",
+                "label": "Severity",
+                "color": "#ffc107",
+                "settings": {}
+              },
+              {
+                "name": "status",
+                "type": "alarm",
+                "label": "Status",
+                "color": "#9c27b0",
+                "settings": {}
+              }
+            ]
+          },
+          "alarmFilterConfig": {
+            "searchPropagatedAlarms": false
+          },
+          "alarmsPollingInterval": 5,
+          "useDashboardTimewindow": true,
+          "settings": {},
+          "enableDataExport": true,
+          "datasources": []
+        },
+        "sizeX": 24,
+        "sizeY": 6
+      }
+    },
+    "states": {
+      "default": {
+        "name": "Master Station Overview",
+        "root": true,
+        "layouts": {
+          "main": {
+            "widgets": {
+              "1eca7d84-efb9-4521-8be4-553695d09429": {
+                "sizeX": 24,
+                "sizeY": 2,
+                "row": 0,
+                "col": 0
+              },
+              "408d3870-dbfa-4db9-b105-beacbab974cc": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 2,
+                "col": 0
+              },
+              "28ddf403-97c7-4a9b-85fd-31f23204b4c8": {
+                "sizeX": 7,
+                "sizeY": 4,
+                "row": 2,
+                "col": 6
+              },
+              "16c66c10-3c5d-43f8-9340-b66015556470": {
+                "sizeX": 6,
+                "sizeY": 4,
+                "row": 2,
+                "col": 13
+              },
+              "0fe224e5-f9a8-48fe-9dc1-f9a13d495517": {
+                "sizeX": 5,
+                "sizeY": 4,
+                "row": 2,
+                "col": 19
+              },
+              "be1b2a0f-50ea-4bf9-939f-0d2ecf397198": {
+                "sizeX": 8,
+                "sizeY": 4,
+                "row": 6,
+                "col": 0
+              },
+              "046accd2-592e-4d80-9db9-de099aee5cd5": {
+                "sizeX": 8,
+                "sizeY": 4,
+                "row": 6,
+                "col": 8
+              },
+              "419e3397-3cd4-4868-801d-f74d17eb678d": {
+                "sizeX": 8,
+                "sizeY": 4,
+                "row": 6,
+                "col": 16
+              },
+              "94ecccc2-191e-4943-95d3-7d4edb0ac2ff": {
+                "sizeX": 14,
+                "sizeY": 6,
+                "row": 10,
+                "col": 0
+              },
+              "d5030ed1-8093-49a6-b6c6-f6ee0ac9bea1": {
+                "sizeX": 10,
+                "sizeY": 6,
+                "row": 10,
+                "col": 14
+              },
+              "6b705f28-2ccf-4b4e-85e2-a45ebcc6a0f0": {
+                "sizeX": 14,
+                "sizeY": 7,
+                "row": 16,
+                "col": 0
+              },
+              "f88fffc7-02a7-49c0-80fd-3b7983a3e68c": {
+                "sizeX": 5,
+                "sizeY": 2,
+                "row": 16,
+                "col": 14
+              },
+              "e0d0a3fb-d7ba-4ff5-9973-2727b1468004": {
+                "sizeX": 5,
+                "sizeY": 2,
+                "row": 16,
+                "col": 19
+              },
+              "0f80f291-ba31-46c3-93c3-d7b921cc440a": {
+                "sizeX": 5,
+                "sizeY": 2,
+                "row": 18,
+                "col": 14
+              },
+              "ff6fb00b-8858-4503-87fe-46ec9780f50d": {
+                "sizeX": 24,
+                "sizeY": 6,
+                "row": 23,
+                "col": 0
+              }
+            },
+            "gridSettings": {
+              "layoutType": "default",
+              "backgroundColor": "#eeeeee",
+              "columns": 24,
+              "margin": 10,
+              "outerMargin": true,
+              "backgroundSizeMode": "100%"
+            }
+          }
+        }
+      }
+    },
+    "timewindow": {
+      "selectedTab": 0,
+      "realtime": {
+        "realtimeType": 0,
+        "timewindowMs": 3600000
+      },
+      "aggregation": {
+        "type": "NONE",
+        "limit": 50000
+      }
+    },
+    "settings": {
+      "stateControllerId": "entity",
+      "showTitle": false,
+      "showDashboardsSelect": true,
+      "showEntitiesSelect": true,
+      "showDashboardTimewindow": true,
+      "showDashboardExport": true,
+      "toolbarAlwaysOpen": true
+    },
+    "additionalInfo": {
+      "aiUpdated": true,
+      "aiUpdateTs": 1790152338343,
+      "aiUpdatedBy": [
+        "AI Assistant"
+      ]
+    }
+  },
+  "resources": []
+}
