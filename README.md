@@ -75,7 +75,6 @@ Each bay monitors:
 | Voltage | V |
 | Current | A |
 | Power | W |
-| Energy | Wh |
 | Temperature | °C |
 | Bay Status | FREE / CHARGING / FAULT |
 | Throttle | % |
