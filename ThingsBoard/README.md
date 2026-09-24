@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <b>ThingsBoard Cloud dashboards for the 3-Bay Smart EV Charging Station</b>
+  <b>ThingsBoard Cloud dashboards for Smart EV Charging Station</b>
 </p>
 
 ---
