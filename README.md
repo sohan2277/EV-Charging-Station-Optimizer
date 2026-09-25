@@ -1,4 +1,4 @@
-# ⚡ Smart EV Charging Station
+# ⚡ Edge AI Based Smart EV Charging Station Optimizer
 
 <p align="center">
   <img src="https://img.shields.io/badge/ESP32-Embedded%20Controller-blue?style=for-the-badge&logo=espressif" alt="ESP32">
